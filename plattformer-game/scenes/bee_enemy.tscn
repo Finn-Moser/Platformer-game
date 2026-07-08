@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://dhm406plye6xr"]
+
+[ext_resource type="Texture2D" uid="uid://cs8f4gw6e3cfa" path="res://Resources/Bee/Idle (36x34).png" id="1_h3jfw"]
+[ext_resource type="Script" uid="uid://d0mrm857yc8lx" path="res://Skripts/bee_enemy.gd" id="1_t0acl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t0acl"]
+atlas = ExtResource("1_h3jfw")
+region = Rect2(0, 0, 36, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ifhc6"]
+atlas = ExtResource("1_h3jfw")
+region = Rect2(36, 0, 36, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ed42y"]
+atlas = ExtResource("1_h3jfw")
+region = Rect2(72, 0, 36, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ln1g7"]
+atlas = ExtResource("1_h3jfw")
+region = Rect2(108, 0, 36, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a1gf7"]
+atlas = ExtResource("1_h3jfw")
+region = Rect2(144, 0, 36, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mr518"]
+atlas = ExtResource("1_h3jfw")
+region = Rect2(180, 0, 36, 34)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iteid"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t0acl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ifhc6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ed42y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ln1g7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a1gf7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mr518")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8bhdk"]
+size = Vector2(35, 31)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ifhc6"]
+radius = 172.07266
+
+[node name="Bee enemy" type="CharacterBody2D"]
+script = ExtResource("1_t0acl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-56.000008, 25.999996)
+scale = Vector2(1.1944444, 1.117647)
+sprite_frames = SubResource("SpriteFrames_iteid")
+autoplay = "default"
+frame_progress = 0.65197724
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-56.5, 27.5)
+shape = SubResource("RectangleShape2D_8bhdk")
+
+[node name="Body Dectector" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body Dectector"]
+position = Vector2(-57, 27)
+shape = SubResource("CircleShape2D_ifhc6")
+
+[connection signal="body_entered" from="Body Dectector" to="." method="_on_body_dectector_body_entered"]

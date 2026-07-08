@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://dldnts38m2qik"]
+
+[ext_resource type="Texture2D" uid="uid://brnbcberrtl1r" path="res://Resources/Clouds/pixil-frame-0 (16).png" id="1_p65jw"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_p65jw"]
+a = Vector2(-18.181992, -63.948532)
+b = Vector2(16.940191, -21.048275)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_2ps3v"]
+a = Vector2(-17.849155, 53.050995)
+b = Vector2(16.940191, -21.048275)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_3nf8i"]
+a = Vector2(18.307163, 107.948364)
+b = Vector2(16.940191, -21.048275)
+
+[node name="Cloud moving$" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(75, 13)
+texture = ExtResource("1_p65jw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(76, 12)
+rotation = -1.5679516
+shape = SubResource("SegmentShape2D_p65jw")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(76, 12)
+rotation = -1.5679516
+shape = SubResource("SegmentShape2D_2ps3v")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(33, 47)
+rotation = -1.5679516
+shape = SubResource("SegmentShape2D_3nf8i")

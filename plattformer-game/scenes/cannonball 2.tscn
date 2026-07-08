@@ -1,0 +1,117 @@
+[gd_scene format=3 uid="uid://i2sxba3ak6qf"]
+
+[ext_resource type="Script" uid="uid://bxt4fmns8me68" path="res://Skripts/cannonball_2.gd" id="1_pfkv7"]
+[ext_resource type="Texture2D" uid="uid://bsklrrfv8vrnq" path="res://Resources/Canonn/cannonball death (1).png" id="2_pfkv7"]
+[ext_resource type="Texture2D" uid="uid://bvldpgdsnr4k" path="res://Resources/Canonn/cannonball death (2).png" id="3_hjono"]
+[ext_resource type="Texture2D" uid="uid://bha0uglmt6pfa" path="res://Resources/Canonn/cannonball death (3).png" id="4_cxo1m"]
+[ext_resource type="Texture2D" uid="uid://0be5mg3auisr" path="res://Resources/Canonn/cannonball death (4).png" id="5_4bfqy"]
+[ext_resource type="Texture2D" uid="uid://ceegn3nq684py" path="res://Resources/Canonn/Cannon Ball.png" id="6_pfkv7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kn1ly"]
+atlas = ExtResource("2_pfkv7")
+region = Rect2(0, 0, 44, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ghwu"]
+atlas = ExtResource("3_hjono")
+region = Rect2(0, 0, 44, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u2mh0"]
+atlas = ExtResource("4_cxo1m")
+region = Rect2(0, 0, 44, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xnbv6"]
+atlas = ExtResource("5_4bfqy")
+region = Rect2(0, 0, 44, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_totjj"]
+atlas = ExtResource("5_4bfqy")
+region = Rect2(0, 0, 44, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dgtyp"]
+atlas = ExtResource("5_4bfqy")
+region = Rect2(0, 0, 44, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ic0rt"]
+atlas = ExtResource("5_4bfqy")
+region = Rect2(0, 0, 44, 28)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3w35l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kn1ly")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ghwu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u2mh0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xnbv6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_totjj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dgtyp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ic0rt")
+}],
+"loop": true,
+"name": &"death 2",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_pfkv7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rg1lc"]
+size = Vector2(10, 8.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sliev"]
+size = Vector2(9, 4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e30b0"]
+size = Vector2(11, 8.5)
+
+[node name="cannonball 2" type="CharacterBody2D"]
+position = Vector2(-3, 0)
+collision_mask = 6
+platform_floor_layers = 4294967042
+platform_wall_layers = 16
+script = ExtResource("1_pfkv7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -2)
+rotation = -0.0034651142
+scale = Vector2(1.107744, 1.120238)
+sprite_frames = SubResource("SpriteFrames_3w35l")
+animation = &"death 2"
+autoplay = "default"
+frame_progress = 0.8581556
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(7, 5)
+shape = SubResource("RectangleShape2D_rg1lc")
+
+[node name="WallDetector" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallDetector"]
+position = Vector2(7, 9)
+shape = SubResource("RectangleShape2D_sliev")
+
+[node name="PlayerDetector" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetector"]
+position = Vector2(6.5, -0.25)
+shape = SubResource("RectangleShape2D_e30b0")
+
+[connection signal="body_entered" from="WallDetector" to="." method="_on_wall_detector_body_entered"]
+[connection signal="body_entered" from="PlayerDetector" to="." method="_on_player_detector_body_entered"]

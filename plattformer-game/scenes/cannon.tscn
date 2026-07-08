@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://lpbrd2p4fnlb"]
+
+[ext_resource type="Texture2D" uid="uid://gxxap47g6je5" path="res://Resources/Canonn/Shoot (44x28).png" id="1_xuqfy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pxhkx"]
+atlas = ExtResource("1_xuqfy")
+region = Rect2(0, 0, 44, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yjxeu"]
+atlas = ExtResource("1_xuqfy")
+region = Rect2(44, 0, 44, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jfr8q"]
+atlas = ExtResource("1_xuqfy")
+region = Rect2(88, 0, 44, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0285d"]
+atlas = ExtResource("1_xuqfy")
+region = Rect2(132, 0, 44, 28)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_22shy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pxhkx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yjxeu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jfr8q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0285d")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ssa1"]
+size = Vector2(27, 20)
+
+[node name="Cannon" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(33, 17)
+scale = Vector2(1.0681819, 1.0714285)
+sprite_frames = SubResource("SpriteFrames_22shy")
+animation = &"new_animation"
+autoplay = "new_animation"
+frame_progress = 0.5622213
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(40.5, 19)
+shape = SubResource("RectangleShape2D_8ssa1")

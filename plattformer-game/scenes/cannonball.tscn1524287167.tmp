@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://buh6u86smrksv"]
+
+[ext_resource type="Texture2D" uid="uid://dxis3eibxi7qf" path="res://Free/Sprites/10-Cannon/Cannon Ball.png" id="1_77qtm"]
+[ext_resource type="Script" uid="uid://bjiq4ldxlaly4" path="res://scenes/cannonball.gd" id="1_402uy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_402uy"]
+radius = 5.0990195
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i6nt2"]
+size = Vector2(14, 5)
+
+[node name="cannonball" type="CharacterBody2D"]
+script = ExtResource("1_402uy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(375, 15)
+texture = ExtResource("1_77qtm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(382, 20)
+shape = SubResource("CircleShape2D_402uy")
+
+[node name="PlayerDetector" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetector"]
+position = Vector2(382, 16)
+shape = SubResource("RectangleShape2D_i6nt2")
+
+[connection signal="body_entered" from="PlayerDetector" to="." method="_on_player_detector_body_entered"]

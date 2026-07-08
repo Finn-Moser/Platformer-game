@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://50wldb3uvw6k"]
+
+[ext_resource type="Script" uid="uid://2ppsrei5uvn0" path="res://Skripts/finish_tutorial.gd" id="1_pjvqs"]
+[ext_resource type="Texture2D" uid="uid://dxyfc8isesri5" path="res://Resources/Items/Checkpoints/End/End (Idle).png" id="1_x3xho"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x3xho"]
+atlas = ExtResource("1_x3xho")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pjvqs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x3xho")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yngqm"]
+size = Vector2(52, 46)
+
+[node name="Finish tutorial" type="Area2D" unique_id=866135208]
+script = ExtResource("1_pjvqs")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1570228982]
+sprite_frames = SubResource("SpriteFrames_pjvqs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1355122310]
+position = Vector2(-1, 10)
+shape = SubResource("RectangleShape2D_yngqm")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
