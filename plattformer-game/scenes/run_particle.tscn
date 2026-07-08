@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://cmrll31ikxtx8"]
+
+[ext_resource type="Texture2D" uid="uid://1ttbib4l2kuw" path="res://Resources/Other/Dust Particle.png" id="1_b3s7e"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_re60p"]
+atlas = ExtResource("1_b3s7e")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_va2bw"]
+atlas = ExtResource("1_b3s7e")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_54f2j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_re60p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_va2bw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[node name="Run particle" type="AnimatedSprite2D"]
+scale = Vector2(0.1875, 0.1875)
+sprite_frames = SubResource("SpriteFrames_54f2j")
+autoplay = "default"
+frame_progress = 0.45663312

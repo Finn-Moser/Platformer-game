@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://b8f8xsan0ni04"]
+
+[ext_resource type="Texture2D" uid="uid://cuy68apcr70l8" path="res://Resources/Spikes/spkikev2-removebg-preview.png" id="1_q8ua5"]
+[ext_resource type="Script" uid="uid://q3oijt6ut1ic" path="res://Skripts/spike_v_2_2d.gd" id="1_s3okw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q8ua5"]
+size = Vector2(64, 19)
+
+[node name="Spike v2" type="Area2D"]
+collision_layer = 2
+script = ExtResource("1_s3okw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(136, -135)
+scale = Vector2(0.090789504, 0.084337346)
+texture = ExtResource("1_q8ua5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(135, -136)
+shape = SubResource("RectangleShape2D_q8ua5")

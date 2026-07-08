@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://csbjebe20gax1"]
+
+[ext_resource type="Script" uid="uid://bslho3avi6hxt" path="res://Skripts/game_selector.gd" id="1_30bdj"]
+[ext_resource type="Texture2D" uid="uid://ddgnndxqugcay" path="res://Resources/Tileset/pixil-frame-0 (10).png" id="2_cq27h"]
+[ext_resource type="Texture2D" uid="uid://c17g34tcv24gm" path="res://Resources/Tileset/pixil-frame-0 (9).png" id="3_lqesy"]
+[ext_resource type="Texture2D" uid="uid://b18b5yqyphx0g" path="res://Resources/Levels/Level 03.png" id="4_x5wr8"]
+[ext_resource type="Texture2D" uid="uid://ffg08o5qsc4y" path="res://Resources/Levels/Level 04.png" id="5_wty80"]
+[ext_resource type="AudioStream" uid="uid://c5ivfajbawcpn" path="res://sounds/viacheslavstarostin-game-gaming-video-game-music-471936.mp3" id="6_cq27h"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_exnxv"]
+texture = ExtResource("2_cq27h")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rcyfd"]
+texture = ExtResource("3_lqesy")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7dr4b"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_30bdj"]
+texture = ExtResource("4_x5wr8")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2ba0a"]
+texture = ExtResource("4_x5wr8")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5kapi"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pay68"]
+texture = ExtResource("5_wty80")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tx0is"]
+
+[node name="GameSelector" type="Control" unique_id=916160782]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_30bdj")
+
+[node name="Panel" type="Panel" parent="." unique_id=1140532575]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_exnxv")
+
+[node name="Button 2" type="Button" parent="." unique_id=1015390303]
+layout_mode = 0
+offset_left = 186.0
+offset_top = 257.0
+offset_right = 243.0
+offset_bottom = 343.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_rcyfd")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_rcyfd")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_rcyfd")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_rcyfd")
+theme_override_styles/hover = SubResource("StyleBoxTexture_rcyfd")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_rcyfd")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7dr4b")
+
+[node name="Button 1" type="Button" parent="." unique_id=1958359608]
+layout_mode = 0
+offset_left = 392.0
+offset_top = 91.0
+offset_right = 595.0
+offset_bottom = 224.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_30bdj")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_2ba0a")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2ba0a")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_2ba0a")
+theme_override_styles/hover = SubResource("StyleBoxTexture_2ba0a")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_2ba0a")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_2ba0a")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_2ba0a")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5kapi")
+
+[node name="Button 3" type="Button" parent="." unique_id=584634936]
+layout_mode = 0
+offset_left = 389.0
+offset_top = 409.0
+offset_right = 584.0
+offset_bottom = 538.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_pay68")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_pay68")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_pay68")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_pay68")
+theme_override_styles/hover = SubResource("StyleBoxTexture_pay68")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_pay68")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_pay68")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_pay68")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tx0is")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1368728820]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1832342942]
+stream = ExtResource("6_cq27h")
+volume_db = -13.619
+autoplay = true
+
+[connection signal="pressed" from="Button 2" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button 1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="Button 3" to="." method="_on_button_3_pressed"]

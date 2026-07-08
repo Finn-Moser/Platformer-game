@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bho5ggelqvc7q"]
+
+[ext_resource type="Script" uid="uid://lj6bhujlnmwq" path="res://Skripts/level_1_selector.gd" id="1_4vrvj"]
+[ext_resource type="Texture2D" uid="uid://crvexwgypbivs" path="res://Resources/Items/Checkpoints/End/Level 1.png" id="1_ubiq3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pdqwk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ubiq3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4vrvj"]
+size = Vector2(46, 46)
+
+[node name="Level 1 selector" type="Area2D" unique_id=358901511]
+script = ExtResource("1_4vrvj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1011288531]
+position = Vector2(254, -95)
+sprite_frames = SubResource("SpriteFrames_pdqwk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=269147878]
+position = Vector2(254, -85)
+shape = SubResource("RectangleShape2D_4vrvj")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

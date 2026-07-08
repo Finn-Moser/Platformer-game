@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://55l6bm0i0nif"]
+
+[ext_resource type="Texture2D" uid="uid://brnbcberrtl1r" path="res://Resources/Clouds/pixil-frame-0 (16).png" id="1_p5hu4"]
+[ext_resource type="Script" uid="uid://bekqx77wa7vil" path="res://Skripts/wolke2.gd" id="1_xrjas"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p5hu4"]
+size = Vector2(135, 35)
+
+[node name="Wolke" type="Area2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_xrjas")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_p5hu4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_p5hu4")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

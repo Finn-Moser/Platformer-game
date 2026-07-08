@@ -1,0 +1,201 @@
+[gd_scene load_steps=10 format=3 uid="uid://dwpsevcqbd20s"]
+
+[ext_resource type="Texture2D" uid="uid://dplldc815nrvx" path="res://screen load.png" id="1_d2nv2"]
+[ext_resource type="Script" uid="uid://c5fmkytng7acq" path="res://panel.gd" id="2_wgsso"]
+[ext_resource type="Texture2D" uid="uid://7ylq6x20qy13" path="res://text 2222-Photoroom.png" id="3_wgsso"]
+
+[sub_resource type="GDScript" id="GDScript_cmhrf"]
+script/source = "extends Node
+
+@onready var mainbuttons: VBoxContainer = $Mainbuttons
+@onready var optons: Panel = $Optons
+
+func _ready():
+	mainbuttons.visibile = true
+	optons.visible = false
+
+
+func _on_button_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://Game Selector.tscn\")
+	print (\"button 1 presst\")
+
+func _on_button_3_pressed() -> void:
+	get_tree().quit()
+	print (\"button 2 presst\")
+	mainbuttons.visibile = false
+	optons.visible = true
+
+func _on_button_2_pressed() -> void:
+	get_tree().quit()
+	print (\"button 3 presst\")
+"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_igs2m"]
+texture = ExtResource("1_d2nv2")
+modulate_color = Color(0.41981313, 0.41981313, 0.4198131, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3pujl"]
+texture = ExtResource("3_wgsso")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wgsso"]
+bg_color = Color(1.3167266, 1.3167266, 1.3167266, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.8)
+shadow_size = 5
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d2nv2"]
+bg_color = Color(0.7792914, 0.7792914, 0.7792912, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.8)
+shadow_size = 5
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wgsso"]
+
+[node name="Mainmenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_cmhrf")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+offset_right = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_igs2m")
+script = ExtResource("2_wgsso")
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -244.0
+offset_top = -244.5
+offset_right = 244.0
+offset_bottom = 14.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_3pujl")
+
+[node name="MainButtons" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -118.0
+offset_top = -36.0
+offset_right = 118.5
+offset_bottom = 173.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 13
+
+[node name="Button3" type="Button" parent="MainButtons"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_wgsso")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_d2nv2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_d2nv2")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_d2nv2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_d2nv2")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wgsso")
+text = "Select Level"
+
+[node name="Button2" type="Button" parent="MainButtons"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_wgsso")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_d2nv2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_d2nv2")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_d2nv2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_d2nv2")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wgsso")
+text = "   Option   "
+
+[node name="Button" type="Button" parent="MainButtons"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_wgsso")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_d2nv2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_d2nv2")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_d2nv2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_d2nv2")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wgsso")
+text = "Exite "
+
+[node name="Optons" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -239.5
+offset_top = -137.0
+offset_right = 239.5
+offset_bottom = 189.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Optons"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -238.25
+offset_top = -116.0
+offset_right = 238.25
+offset_bottom = 163.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "Options"
+
+[connection signal="pressed" from="MainButtons/Button3" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MainButtons/Button2" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MainButtons/Button" to="." method="_on_button_pressed"]
