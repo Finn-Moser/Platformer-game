@@ -1,30 +1,35 @@
-# Passwort-Manager
+# Platformer
 
 ## Motivation
 
-Ich hatte oft Probleme, mir meine Passwörter zu merken. Deshalb entwickelte ich ein eigenes Programm, mit dem Passwörter gespeichert und verwaltet werden können.
+Ich spiele sehr gerne Computerspiele und interessiere mich dafür, wie Spiele programmiert und entwickelt werden.
+
+Dadurch kam ich auf die Idee, mein eigenes Platformer-Game zu erstellen.
+
+Seit ungefähr fünf Monaten arbeite ich an diesem Projekt.
+
+Mein Ziel war es, ein eigenes Spiel zu entwickeln, bei dem der Spieler verschiedene Hindernisse überwinden, über Plattformen springen und das Ziel erreichen muss.
 
 ## Funktionen
 
-- Erstellen eines Master-Passworts.
-- Bestätigung des Passworts zur Sicherheit.
-- Speichern von App-Namen und dazugehörigen Passwörtern.
-- Anzeigen der gespeicherten Einträge.
-- Löschen gespeicherter Passwörter.
-- Einfache Bedienung über eine grafische Benutzeroberfläche (GUI).
+- Der Spieler kann laufen und springen.
+- Der Spieler kann sich über verschiedene Plattformen bewegen.
+- Es gibt Hindernisse und Gefahren.
+- Der Spieler muss das Ziel des Levels erreichen.
+- Das Spiel besitzt verschiedene Herausforderungen.
+- Einfache Steuerung der Spielfigur.
 
 ## Besonderheit
 
-Das Spezielle an meinem Passwort-Manager ist, dass man zuerst ein Master-Passwort erstellen muss, bevor man zur Hauptseite gelangt.
+Das Spezielle an meinem Platformer-Game ist, dass ich seit ungefähr fünf Monaten selbstständig daran arbeite und es immer weiter verbessere.
 
-Danach können verschiedene Passwörter für Apps gespeichert und verwaltet werden.
+Ich habe verschiedene Funktionen selbst programmiert und dabei viel über Spieleentwicklung und Programmierung gelernt.
 
 ## Beispiel
 
-### Erstellen des Master-Passworts
-
-#### Eingabe
+### Aufgabe
 
 ```text
-Master-Passwort: 1234
-Passwort bestätigen: 1234
+Über Plattformen springen
+Hindernissen ausweichen
+Das Ziel erreichen
