@@ -1332,7 +1332,7 @@ position = Vector2(1591, -250)
 position = Vector2(1563, -188)
 
 [node name="Area2D39" parent="Coins" unique_id=1740567017 instance=ExtResource("4_fc0e3")]
-position = Vector2(1656, -220)
+position = Vector2(1657, -214)
 
 [node name="Area2D40" parent="Coins" unique_id=1965189338 instance=ExtResource("4_fc0e3")]
 position = Vector2(1654, -166)
@@ -1582,7 +1582,7 @@ libraries/ = SubResource("AnimationLibrary_4hnp4")
 autoplay = &"new_animation"
 
 [node name="Enemy radish3" parent="enemys" unique_id=145497087 instance=ExtResource("19_0ejhj")]
-position = Vector2(1399, -238)
+position = Vector2(1398, -239)
 
 [node name="Enemy radish4" parent="enemys" unique_id=1492131038 instance=ExtResource("19_0ejhj")]
 position = Vector2(2153, -49)
