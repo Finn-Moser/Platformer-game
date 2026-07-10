@@ -3731,39 +3731,12 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="GDScript" id="GDScript_sufmp"]
+[sub_resource type="GDScript" id="GDScript_mcbjr"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e5xmp"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_htxm1"]
-bg_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-shadow_size = 5
-shadow_offset = Vector2(0, 3)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mcbjr"]
-bg_color = Color(0.7294118, 0.7294118, 0.7294118, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-shadow_size = 5
-shadow_offset = Vector2(0, 3)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bot8y"]
-bg_color = Color(0.7294118, 0.7294118, 0.7294118, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-shadow_size = 5
-shadow_offset = Vector2(0, 3)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bot8y"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qgody"]
-bg_color = Color(0.7294118, 0.7294118, 0.7294118, 1)
+bg_color = Color(1, 1, 1, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
@@ -3808,7 +3781,7 @@ shadow_size = 5
 shadow_offset = Vector2(0, 3)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2ejx2"]
-bg_color = Color(1, 1, 1, 1)
+bg_color = Color(0.7294118, 0.7294118, 0.7294118, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
@@ -3835,7 +3808,7 @@ shadow_size = 5
 shadow_offset = Vector2(0, 3)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w2srp"]
-bg_color = Color(0.7294118, 0.7294118, 0.7294118, 1)
+bg_color = Color(1, 1, 1, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
@@ -3870,7 +3843,52 @@ corner_radius_bottom_left = 16
 shadow_size = 5
 shadow_offset = Vector2(0, 3)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mcbjr"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dod0h"]
+bg_color = Color(0.7294118, 0.7294118, 0.7294118, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_buybl"]
+bg_color = Color(0.7294118, 0.7294118, 0.7294118, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3hbhj"]
+bg_color = Color(0.7294118, 0.7294118, 0.7294118, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e8pjf"]
+bg_color = Color(0.7294118, 0.7294118, 0.7294118, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gh7eo"]
+bg_color = Color(0.7294118, 0.7294118, 0.7294118, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n7m1f"]
 texture = ExtResource("17_mcbjr")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xqr3d"]
@@ -4267,24 +4285,15 @@ position = Vector2(-156, -303)
 [node name="Hearts +4" parent="Hearts +" unique_id=871918416 instance=ExtResource("15_e5xmp")]
 position = Vector2(-2251, -3)
 
-[node name="Player" parent="." unique_id=1294931979 instance=ExtResource("1_dv2v8")]
-position = Vector2(-30, -96)
-collision_mask = 3
-particle = null
-
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1453004502]
-zoom = Vector2(4.5, 4.5)
-limit_bottom = 110
-rotation_smoothing_enabled = true
-
-[node name="GameManeger" type="Node" parent="." unique_id=791199791]
+[node name="GameManeger" type="Node" parent="." unique_id=791199791 node_paths=PackedStringArray("hearts")]
 unique_name_in_owner = true
 script = ExtResource("6_1kwph")
+hearts = [NodePath("../Ui/Hearts/HBoxContainer/Heart"), NodePath("../Ui/Hearts/HBoxContainer/Heart2"), NodePath("../Ui/Hearts/HBoxContainer/Heart3")]
 
-[node name="Ui" type="CanvasLayer" parent="." unique_id=1331358476]
-script = SubResource("GDScript_sufmp")
+[node name="Ui" type="CanvasLayer" parent="." unique_id=568620705]
+script = SubResource("GDScript_mcbjr")
 
-[node name="Panel" type="Panel" parent="Ui" unique_id=102733176]
+[node name="Panel" type="Panel" parent="Ui" unique_id=1559085960]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
@@ -4293,33 +4302,25 @@ offset_top = 8.0
 offset_right = -8.0
 offset_bottom = 35.0
 grow_horizontal = 0
-theme_override_styles/panel = SubResource("StyleBoxTexture_e5xmp")
 
-[node name="Label" type="Label" parent="Ui/Panel" unique_id=868594810]
+[node name="Label" type="Label" parent="Ui/Panel" unique_id=1988985505]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -71.0
+offset_left = -75.0
 offset_bottom = 23.0
 grow_horizontal = 0
-text = "Points = 0"
+theme_override_styles/normal = SubResource("StyleBoxTexture_bot8y")
+text = "Points : 0 "
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel" type="Panel" parent="Ui/Panel" unique_id=238673769]
-visible = false
-layout_mode = 0
-offset_left = -64.0
-offset_top = -20.0
-offset_right = 163.0
-offset_bottom = 40.0
-
-[node name="Pause" type="Node" parent="Ui" unique_id=1750964252]
+[node name="Pause" type="Node" parent="Ui" unique_id=1778249745]
 script = ExtResource("7_t75i1")
 
-[node name="Pausepanel" type="Panel" parent="Ui/Pause" unique_id=1718910356]
+[node name="Pausepanel" type="Panel" parent="Ui/Pause" unique_id=545317623]
 unique_name_in_owner = true
 visible = false
 anchors_preset = 15
@@ -4328,7 +4329,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="Ui/Pause/Pausepanel" unique_id=1422604477]
+[node name="Label" type="Label" parent="Ui/Pause/Pausepanel" unique_id=1959599055]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -4345,7 +4346,7 @@ theme_override_font_sizes/font_size = 50
 text = "Game Paused"
 horizontal_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Ui/Pause/Pausepanel" unique_id=613039471]
+[node name="VBoxContainer" type="VBoxContainer" parent="Ui/Pause/Pausepanel" unique_id=149717300]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -4360,67 +4361,78 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 10
 
-[node name="Resume" type="Button" parent="Ui/Pause/Pausepanel/VBoxContainer" unique_id=599973106]
+[node name="Resume2" type="Button" parent="Ui/Pause/Pausepanel/VBoxContainer" unique_id=1583273607]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxFlat_htxm1")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_mcbjr")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_bot8y")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_qgody")
-theme_override_styles/hover = SubResource("StyleBoxFlat_e5xmp")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_1cdt0")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_yyw72")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_exupa")
+theme_override_styles/normal = SubResource("StyleBoxFlat_qgody")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_e5xmp")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1cdt0")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_yyw72")
+theme_override_styles/hover = SubResource("StyleBoxFlat_exupa")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_2ejx2")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_juxmv")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_1xus8")
 text = "Resume"
 
-[node name="Menu" type="Button" parent="Ui/Pause/Pausepanel/VBoxContainer" unique_id=1482415445]
+[node name="Menu" type="Button" parent="Ui/Pause/Pausepanel/VBoxContainer" unique_id=902509150]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxFlat_2ejx2")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_juxmv")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_1xus8")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_w2srp")
-theme_override_styles/hover = SubResource("StyleBoxFlat_iqog1")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_alhy0")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_oupwr")
+theme_override_styles/normal = SubResource("StyleBoxFlat_w2srp")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_iqog1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_alhy0")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_oupwr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dod0h")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_buybl")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_3hbhj")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_e8pjf")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gh7eo")
 text = "Menu
 "
 
-[node name="Hearts" type="Panel" parent="Ui" unique_id=1327436719]
+[node name="Hearts" type="Panel" parent="Ui" unique_id=934439821]
 offset_left = 21.0
 offset_top = 24.0
 offset_right = 259.0
 offset_bottom = 136.0
-theme_override_styles/panel = SubResource("StyleBoxTexture_mcbjr")
+theme_override_styles/panel = SubResource("StyleBoxTexture_n7m1f")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Ui/Hearts" unique_id=849902337]
+[node name="HBoxContainer" type="HBoxContainer" parent="Ui/Hearts" unique_id=1994146494]
 modulate = Color(0.99354213, 0.9943537, 0.99450034, 1)
 layout_mode = 0
-offset_left = -15.0
-offset_top = 39.0
-offset_right = 252.0
-offset_bottom = 72.0
-alignment = 1
+offset_left = 67.0
+offset_top = 38.0
+offset_right = 343.0
+offset_bottom = 71.0
 
-[node name="Heart" type="TextureRect" parent="Ui/Hearts/HBoxContainer" unique_id=650621671]
+[node name="Heart" type="TextureRect" parent="Ui/Hearts/HBoxContainer" unique_id=1581332079]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("18_bot8y")
 expand_mode = 2
 
-[node name="Heart2" type="TextureRect" parent="Ui/Hearts/HBoxContainer" unique_id=1862625463]
+[node name="Heart2" type="TextureRect" parent="Ui/Hearts/HBoxContainer" unique_id=694787840]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("18_bot8y")
 expand_mode = 2
 
-[node name="Heart3" type="TextureRect" parent="Ui/Hearts/HBoxContainer" unique_id=401410213]
+[node name="Heart3" type="TextureRect" parent="Ui/Hearts/HBoxContainer" unique_id=1237093100]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("18_bot8y")
 expand_mode = 2
+
+[node name="Player" parent="." unique_id=1294931979 instance=ExtResource("1_dv2v8")]
+position = Vector2(-30, -96)
+collision_mask = 3
+particle = null
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1453004502]
+zoom = Vector2(4.5, 4.5)
+limit_bottom = 110
+rotation_smoothing_enabled = true
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=877101117]
 position = Vector2(1608.5, -143)
@@ -4666,14 +4678,6 @@ position = Vector2(7, 43)
 
 [node name="coin2" parent="Coins" unique_id=1273517281 instance=ExtResource("19_t75i1")]
 position = Vector2(112.00001, -70)
-rotation = 0.016689427
-
-[node name="coin2" parent="Coins/coin2" unique_id=1280938664 instance=ExtResource("19_t75i1")]
-position = Vector2(68.25754, 14.862943)
-rotation = 0.016689427
-
-[node name="coin2" parent="Coins/coin2/coin2" unique_id=1516039204 instance=ExtResource("19_t75i1")]
-position = Vector2(44.043972, 30.54715)
 rotation = 0.016689427
 
 [node name="coin" parent="Coins" unique_id=1609615829 instance=ExtResource("19_t75i1")]
@@ -4965,7 +4969,6 @@ collision_layer = 2
 stream = ExtResource("31_qgody")
 autoplay = true
 
-[connection signal="pressed" from="Ui/Pause/Pausepanel/VBoxContainer/Resume" to="Ui/Pause" method="_on_resume_pressed"]
 [connection signal="pressed" from="Ui/Pause/Pausepanel/VBoxContainer/Menu" to="Ui/Pause" method="_on_menu_pressed"]
 [connection signal="body_entered" from="Killzone3/Coin points plus" to="Killzone3/Coin points plus" method="_on_body_entered"]
 [connection signal="body_entered" from="Killzone3/Coin points plus2" to="Killzone3/Coin points plus2" method="_on_body_entered"]

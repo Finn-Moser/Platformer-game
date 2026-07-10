@@ -68,7 +68,7 @@ func _physics_process(delta: float) -> void:
 
 func _play_animation() -> void:
 
-	# LEVEL 3 
+	
 	if is_level3:
 
 		if is_on_floor():
@@ -83,7 +83,7 @@ func _play_animation() -> void:
 		return
 
 
-	#  NORMALE LEVEL
+	
 	if is_on_floor():
 		if abs(velocity.x) > 1:
 			sprite_2d.play("running")

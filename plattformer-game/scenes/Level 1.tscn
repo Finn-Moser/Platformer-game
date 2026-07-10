@@ -1222,11 +1222,10 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_bfbj5")
 [node name="HBoxContainer" type="HBoxContainer" parent="Ui/Hearts" unique_id=542478094]
 modulate = Color(0.99354213, 0.9943537, 0.99450034, 1)
 layout_mode = 0
-offset_left = -15.0
+offset_left = 67.0
 offset_top = 39.0
-offset_right = 252.0
-offset_bottom = 72.0
-alignment = 1
+offset_right = 338.0
+offset_bottom = 71.0
 
 [node name="Heart" type="TextureRect" parent="Ui/Hearts/HBoxContainer" unique_id=653475499]
 texture_filter = 1
