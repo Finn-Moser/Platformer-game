@@ -1,72 +1,30 @@
-# Platformer
+# Passwort-Manager
 
 ## Motivation
 
-Ich spiele sehr gerne Computerspiele und interessiere mich dafür, wie Spiele programmiert und entwickelt werden.
-Dadurch kam ich auf die Idee, mein eigenes Platformer-Game zu erstellen.
-
-Seit ungefähr fünf Monaten arbeite ich an diesem Projekt.
-Mein Ziel war es, ein eigenes Spiel zu entwickeln, bei dem der Spieler verschiedene Hindernisse überwinden, über Plattformen springen und das Ziel erreichen muss.
+Ich hatte oft Probleme, mir meine Passwörter zu merken. Deshalb entwickelte ich ein eigenes Programm, mit dem Passwörter gespeichert und verwaltet werden können.
 
 ## Funktionen
 
-* Der Spieler kann laufen und springen.
-* Der Spieler kann sich über verschiedene Plattformen bewegen.
-* Es gibt Hindernisse und Gefahren.
-* Der Spieler muss das Ziel des Levels erreichen.
-* Das Spiel besitzt verschiedene Herausforderungen.
-* Einfache Steuerung der Spielfigur.
-
-## Motivation
-
-Ich spiele sehr gerne Computerspiele und wollte schon immer wissen, wie ein eigenes Spiel programmiert wird.
-Deshalb habe ich mich entschieden, selbst ein Platformer-Game zu entwickeln.
-
-Mein Ziel war es, ein Spiel zu erstellen, bei dem der Spieler durch ein Level läuft, springt und verschiedene Hindernisse überwinden muss.
+- Erstellen eines Master-Passworts.
+- Bestätigung des Passworts zur Sicherheit.
+- Speichern von App-Namen und dazugehörigen Passwörtern.
+- Anzeigen der gespeicherten Einträge.
+- Löschen gespeicherter Passwörter.
+- Einfache Bedienung über eine grafische Benutzeroberfläche (GUI).
 
 ## Besonderheit
 
-Das Spezielle an meinem Platformer-Game ist, dass ich seit ungefähr fünf Monaten selbstständig daran arbeite und es immer weiter verbessere.
+Das Spezielle an meinem Passwort-Manager ist, dass man zuerst ein Master-Passwort erstellen muss, bevor man zur Hauptseite gelangt.
 
-Ich habe verschiedene Funktionen selbst programmiert und dabei viel über Spieleentwicklung und Programmierung gelernt.
+Danach können verschiedene Passwörter für Apps gespeichert und verwaltet werden.
 
-### Beispiel
+## Beispiel
 
-Aufgabe:
+### Erstellen des Master-Passworts
 
-```text
-Über Plattformen springen
-Hindernissen ausweichen
-Das Ziel erreichen
-```
-
-Ausgabe:
+#### Eingabe
 
 ```text
-Level geschafft!
-```
-
-## Technische Umsetzung
-
-Ich habe für mein Platformer-Game eine Programmiersprache und verschiedene Werkzeuge zur Spieleentwicklung verwendet.
-
-Während der Entwicklung habe ich das Spiel Schritt für Schritt verbessert, Fehler behoben und neue Funktionen hinzugefügt.
-
-## Benutzeroberfläche
-
-### Startbildschirm
-
-![Platformer Startbildschirm](Screenshot_Startbildschirm.png)
-
-### Beispiel aus dem Spiel
-
-![Platformer Gameplay](Screenshot_Gameplay.png)
-
-## Projektinformationen
-
-**Finn Moser**
-Goldschmiedstrasse 12
-8102 Oberengstringen
-
-📞 +41 78 257 06 08
-✉️ [finn.moser@outlook.com](mailto:finn.moser@outlook.com)
+Master-Passwort: 1234
+Passwort bestätigen: 1234
