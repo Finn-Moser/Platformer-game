@@ -3,7 +3,6 @@ extends Control
 
 func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/Level 2.tscn")
-	print ("button 2 presst")
 
 
 func _on_button_1_pressed() -> void:

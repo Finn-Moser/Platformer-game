@@ -1093,12 +1093,12 @@ layer_1/tile_data = PackedInt32Array(131063, 524288, 0, 196599, 524288, 1, 13106
 [node name="TileMapLayer" type="TileMapLayer" parent="TileMap" unique_id=740158148]
 
 [node name="start" parent="." unique_id=355827386 instance=ExtResource("9_l161d")]
-position = Vector2(-236, 0)
+position = Vector2(-218, -1)
 collision_layer = 2
 collision_mask = 2
 
 [node name="Player" parent="." unique_id=1470616031 instance=ExtResource("1_80nbo")]
-position = Vector2(-240, -4)
+position = Vector2(-223, -4)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=402714509]
 position = Vector2(7, -6)
@@ -1247,6 +1247,9 @@ texture = ExtResource("14_sgdum")
 expand_mode = 2
 
 [node name="Coins" type="Node" parent="." unique_id=1370812609]
+
+[node name="Coin bad11" parent="Coins" unique_id=1773051845 instance=ExtResource("12_sufmp")]
+position = Vector2(133, 4)
 
 [node name="Area2D" parent="Coins" unique_id=1834128919 instance=ExtResource("4_fc0e3")]
 position = Vector2(61, 16)
