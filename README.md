@@ -27,6 +27,9 @@ Das Spezielle an meinem Platformer-Game ist, dass es wie bei Super Mario einen e
 
 Durch dieses Platfomer-game habe ich viel über den Aufbau der Spieleentwicklung und Programmierung gelernt. 
 
+## Technische Umsetzung
+
+Ich habe die Programmiersprache GDScript und das Programm Godot verwendet.
 
 **Finn Moser**  
 Goldschmiedstrasse 12  
