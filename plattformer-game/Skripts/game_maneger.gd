@@ -2,6 +2,7 @@ extends Node
 
 @export var hearts: Array[TextureRect]
 
+
 @onready var label: Label = %Label
 @onready var coin_points_plus: Area2D = get_node_or_null("../Coin points plus")
 
