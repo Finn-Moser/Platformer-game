@@ -19,7 +19,7 @@ Mein Game ist noch lange nicht fertig, gerne möchte ich noch weitere Levels hin
 - Der Spieler muss das Ziel des Levels erreichen.
 - Das Spiel besitzt verschiedene Herausforderungen.
 - Grosser Spielspass für den Gamer.
-- mehrere abwechslungsreiche Levels.
+- mehrere abwechslungsreiche Levels. 
   
 ## Besonderheit
 
