@@ -4637,36 +4637,32 @@ position = Vector2(275, -303)
 [node name="Bat enemy6" parent="." unique_id=991425975 instance=ExtResource("22_aaqlr")]
 position = Vector2(1573, 77)
 
-[node name="spike19" parent="." unique_id=2036072739 instance=ExtResource("17_1kwph")]
-position = Vector2(439, -31)
-script = ExtResource("18_t75i1")
-
-[node name="Bat enemy8" parent="spike19" unique_id=1085402653 instance=ExtResource("22_aaqlr")]
+[node name="Bat enemy8" parent="." unique_id=1085402653 instance=ExtResource("22_aaqlr")]
 position = Vector2(3060, -403)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="spike19/Bat enemy8" unique_id=1591553011]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Bat enemy8" unique_id=1591553011]
 libraries/ = SubResource("AnimationLibrary_8giyf")
 autoplay = &"new_animation"
 
-[node name="Bat enemy9" parent="spike19" unique_id=329584769 instance=ExtResource("22_aaqlr")]
-position = Vector2(2917, -196)
+[node name="Bat enemy9" parent="." unique_id=329584769 instance=ExtResource("22_aaqlr")]
+position = Vector2(3356, -227)
 
-[node name="Bat enemy5" parent="spike19" unique_id=144831862 instance=ExtResource("22_aaqlr")]
-position = Vector2(-954, 98)
+[node name="Bat enemy5" parent="." unique_id=144831862 instance=ExtResource("22_aaqlr")]
+position = Vector2(-515, 67)
 
-[node name="Bat enemy2" parent="spike19" unique_id=1665413929 instance=ExtResource("22_aaqlr")]
-position = Vector2(895, 81)
+[node name="Bat enemy2" parent="." unique_id=1665413929 instance=ExtResource("22_aaqlr")]
+position = Vector2(1334, 50)
 
-[node name="Bat enemy3" parent="spike19" unique_id=2142300752 instance=ExtResource("22_aaqlr")]
-position = Vector2(947, 82)
+[node name="Bat enemy3" parent="." unique_id=2142300752 instance=ExtResource("22_aaqlr")]
+position = Vector2(1386, 51)
 
-[node name="Bat enemy4" parent="spike19" unique_id=2009003406 instance=ExtResource("22_aaqlr")]
-position = Vector2(987, 82)
+[node name="Bat enemy4" parent="." unique_id=2009003406 instance=ExtResource("22_aaqlr")]
+position = Vector2(1426, 51)
 
-[node name="Bat enemy7" parent="spike19" unique_id=168559126 instance=ExtResource("22_aaqlr")]
+[node name="Bat enemy7" parent="." unique_id=168559126 instance=ExtResource("22_aaqlr")]
 position = Vector2(2697, -53)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="spike19/Bat enemy7" unique_id=1781521834]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Bat enemy7" unique_id=1781521834]
 libraries/ = SubResource("AnimationLibrary_tkyxr")
 autoplay = &"animation"
 
